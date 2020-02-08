@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" style="-fx-font-family: Montserrat" styleClass="container" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.pietoro.Controller">
+    <children>
+        <GridPane prefHeight="540.0" prefWidth="960.0" styleClass="main-grid" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+            <GridPane prefHeight="540.0" prefWidth="480.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="320.0" minHeight="10.0" prefHeight="120.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="447.0" minHeight="10.0" prefHeight="420.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="panel-left">
+                     <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="56.0" layoutY="31.0" text="BMI Calculator">
+                           <font>
+                              <Font name="Montserrat ExtraBold" size="47.0" />
+                           </font>
+                        </Label>
+                     </children>
+                      </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="panel-left-bottom" GridPane.rowIndex="1">
+                     <children>
+                              <ImageView fitHeight="381.0" fitWidth="460.0" layoutX="10.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@diet.jpg" />
+                                  </image>
+                              </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="panel-right" GridPane.columnIndex="1">
+                    <children>
+                        <GridPane layoutX="116.0" layoutY="190.0" prefHeight="470.0" prefWidth="445.0" styleClass="panel-left-grid" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <TextField fx:id="txtWeigth" prefHeight="43.0" prefWidth="340.0" promptText="Enter your weight (kg)" styleClass="text-field-size" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Montserrat Light" size="15.0" />
+                           </font></TextField>
+                                <TextField fx:id="txtHeight" prefHeight="45.0" prefWidth="340.0" promptText="Enter your height (cm)" styleClass="text-field-size" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Montserrat Regular" size="15.0" />
+                           </font></TextField>
+                                <Button fx:id="btnCalc" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#calculateBMI" prefHeight="46.0" prefWidth="170.0" text="Calculate" GridPane.rowIndex="3">
+                                    <GridPane.margin>
+                                        <Insets />
+                                    </GridPane.margin>
+                           <font>
+                              <Font name="Montserrat Medium" size="13.0" />
+                           </font>
+                                </Button>
+                                <Label maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="360.0" styleClass="title-BMI" text="Calculate Your BMI Score">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font></Label>
+                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                    <children>
+                                        <Label text="Score: ">
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                        </Label>
+                                        <Label fx:id="txtResultBMI" alignment="CENTER_RIGHT" styleClass="label-result" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                    <children>
+                                        <Label text="Status: " />
+                                        <Label fx:id="txtResultStatus" styleClass="label-result" text="" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </GridPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

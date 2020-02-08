@@ -1,0 +1,60 @@
+.container {
+    -fx-font-family: Calibri;
+    -fx-background-color: #353535;
+}
+
+.main-grid {
+    -fx-background-color: #353535;
+}
+
+.panel-left {
+    -fx-background-color: #fccf3a;
+    -fx-font-size: 40px;
+}
+.panel-left-bottom {
+    -fx-background-color: white;
+}
+
+.panel-right {
+    -fx-background-color: #353535;
+}
+
+.panel-left-grid {
+    -fx-padding: 10px 50px;
+
+}
+
+.title-BMI {
+    -fx-font-weight: bold;
+}
+
+.panel-left-grid .label,.button {
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+}
+
+.panel-left-grid > .button {
+    -fx-background-color: #fccf3a;
+    -fx-border-radius: 50px;
+    -fx-text-fill: #353535;
+    -fx-effect: dropshadow(one-pass-box, #dedede, 0, 2, -2, 2);
+}
+
+.panel-left-grid > .button:hover {
+    -fx-background-color: #fcda44;
+}
+
+.panel-left-grid .label-result {
+    -fx-font-weight: bold;
+
+   }
+
+.text-field-size {
+    -fx-font-size: 24px;
+    -fx-background-color: #353535;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-border-style: none none solid none;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #fccf3a;
+}
