@@ -48,7 +48,7 @@ public class Controller {
             txtResultStatus.setTextFill(Paint.valueOf("#fce271"));
             return Status.OVERWEIGHT.getStatusDescripttion();
         } else {
-            txtResultStatus.setTextFill(Paint.valueOf("#fc88711"));
+            txtResultStatus.setTextFill(Paint.valueOf("#fc8871"));
             return Status.OBESE.getStatusDescripttion();
         }
 
